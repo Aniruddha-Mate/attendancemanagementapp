@@ -46,12 +46,6 @@ public class StudentServiceImpl implements StudentService{
 	}
 
 	@Override
-	public StudentEntity addStudent(StudentEntity entity) {
-		// TODO Auto-generated method stub
-		return studentRepository.save(entity);
-	}
-
-	@Override
 	public StudentEntity updateStudent(int studentId, StudentEntity entity) throws StudentNotFoundException{
 		
 		Supplier<StudentNotFoundException> supplier=()->new StudentNotFoundException("No such Student Found");

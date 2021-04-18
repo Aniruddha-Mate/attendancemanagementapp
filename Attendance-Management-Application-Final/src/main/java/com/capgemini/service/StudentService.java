@@ -12,8 +12,6 @@ public interface StudentService {
 	StudentEntity getStudentById(int studentId) throws StudentNotFoundException;
 
 	List<StudentEntity> getStudents() throws RecordNotFoundException;
-	
-	StudentEntity addStudent(StudentEntity entity);
 
 	StudentEntity updateStudent(int studentId, StudentEntity entity) throws StudentNotFoundException;
 

@@ -365,28 +365,6 @@ class AttendanceManagementApplicationTest  {
 
 	
 	@Test
-	public void testAddStudent()
-	{
-		StudentEntity std = new StudentEntity();
-		std.setStudentId(1);
-		std.setFirstName("Kamal");
-		std.setLastName("Sahu");
-		//std.setDateOfBirth("1998-07-21");
-	
-		//	ticket.setBookingDate(new Date());
-		std.setGender("Male");
-		std.setMobileNumber("8225864337");
-		std.setEmailId("kamal@gmail.com");
-		std.setSemester("2");
-		std.setFatherEmailId("father@gmail.com");
-		std.setFatherMobileNumber("8455445788");
-		Mockito.when(studentRepository.save(std)).thenReturn(std);
-	    assertThat(studentService.addStudent(std)).isEqualTo(std);
-	    
-	    
-	}
-	
-	@Test
 	public void testGetStudents() throws RecordNotFoundException{
 
 		StudentEntity std = new StudentEntity();

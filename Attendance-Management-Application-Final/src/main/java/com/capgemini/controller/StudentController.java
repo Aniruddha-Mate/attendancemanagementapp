@@ -40,12 +40,6 @@ public class StudentController {
 		return new ResponseEntity<List<StudentEntity>>(studService.getStudents(),HttpStatus.OK);
 	}
 	
-	@PostMapping("/add")
-	public ResponseEntity<StudentEntity> addStudent(@Valid @RequestBody StudentEntity entity)
-	{
-		return new ResponseEntity<StudentEntity>(studService.addStudent(entity),HttpStatus.CREATED);
-	}
-	
 	@PutMapping("/update/{studentId}")
 	public ResponseEntity<StudentEntity> updateStudent(@Valid @PathVariable int studentId, @Valid @RequestBody StudentEntity entity) 
 			throws StudentNotFoundException
