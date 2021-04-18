@@ -29,11 +29,6 @@ public class GlobalExceptionHandler
 	         ErrorDetails errorDetails = new ErrorDetails(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
 	         return new ResponseEntity<ErrorDetails>(errorDetails, HttpStatus.NOT_FOUND);
 	    }
-	 
-	    @ExceptionHandler(Exception.class) 
-		  public ResponseEntity<ErrorDetails> globalExceptionHandler(Exception ex, WebRequest request) { 
-	         ErrorDetails errorDetails = new ErrorDetails(LocalDateTime.now(), ex.getMessage(),request.getDescription(false)); 
-		     return new ResponseEntity<>(errorDetails,HttpStatus.INTERNAL_SERVER_ERROR); }
 	    
 	    @ExceptionHandler(AttendanceIdNotFoundException.class) 
 		  public ResponseEntity<ErrorDetails> AttendanceIdNotFoundException(Exception ex, WebRequest request) { 
@@ -45,4 +40,11 @@ public class GlobalExceptionHandler
 	         ErrorDetails errorDetails = new ErrorDetails(LocalDateTime.now(), ex.getMessage(),request.getDescription(false)); 
 		     return new ResponseEntity<>(errorDetails,HttpStatus.NOT_FOUND); }
 
-}
+
+	 
+	    @ExceptionHandler(Exception.class) 
+		  public ResponseEntity<ErrorDetails> globalExceptionHandler(Exception ex, WebRequest request) { 
+	         ErrorDetails errorDetails = new ErrorDetails(LocalDateTime.now(), ex.getMessage(),request.getDescription(false)); 
+		     return new ResponseEntity<>(errorDetails,HttpStatus.INTERNAL_SERVER_ERROR); }
+	    
+	    }
