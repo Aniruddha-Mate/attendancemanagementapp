@@ -1,8 +1,6 @@
 package com.capgemini.service;
 
 import java.util.List;
-import java.util.function.BooleanSupplier;
-
 import com.capgemini.entity.FacultyEntity;
 import com.capgemini.exception.FacultyIdNotFoundException;
 import com.capgemini.exception.RecordNotFoundException;

@@ -9,13 +9,11 @@ import org.springframework.stereotype.Service;
 
 import com.capgemini.entity.CourseEntity;
 import com.capgemini.entity.StudentEntity;
-import com.capgemini.entity.SubjectEntity;
 import com.capgemini.exception.CourseIdNotFoundException;
 import com.capgemini.exception.DuplicateRecordException;
 import com.capgemini.exception.RecordNotFoundException;
 import com.capgemini.exception.StudentNotFoundException;
 import com.capgemini.repository.CourseRepository;
-import com.capgemini.repository.FacultyRepository;
 import com.capgemini.repository.StudentRepository;
 @Service
 public class StudentServiceImpl implements StudentService{

@@ -1,8 +1,6 @@
 package com.capgemini.controller;
 
 import java.util.List;
-import java.util.Optional;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.capgemini.entity.SubjectEntity;
@@ -24,7 +21,6 @@ import com.capgemini.exception.DuplicateRecordException;
 import com.capgemini.exception.FacultyIdNotFoundException;
 import com.capgemini.exception.RecordNotFoundException;
 import com.capgemini.exception.SubjectNotFoundException;
-import com.capgemini.service.*;
 import com.capgemini.service.SubjectService;
 
 @RestController
@@ -47,8 +43,7 @@ public class SubjectController {
 	throws SubjectNotFoundException
 	{
 		SubjectEntity se = subjectService.updateSubjectById(subjectId, fe);
-		ResponseEntity re = new ResponseEntity<SubjectEntity>(se, HttpStatus.OK);
-		return re;
+		return new ResponseEntity<SubjectEntity>(se, HttpStatus.OK);
 	}
 	
 	@GetMapping(path="/getSubjectById/{subjectId}") 
@@ -62,8 +57,7 @@ public class SubjectController {
 	public ResponseEntity<List<SubjectEntity>> getAllSubjects() throws RecordNotFoundException
 	{		
 		List<SubjectEntity> se = subjectService.getAllSubjects();
-		ResponseEntity re = new ResponseEntity<List<SubjectEntity>>(se, HttpStatus.OK);
-		return re;
+		return new ResponseEntity<List<SubjectEntity>>(se, HttpStatus.OK);
 		
 	}
 
@@ -98,7 +92,6 @@ public class SubjectController {
 	public ResponseEntity<List<SubjectEntity>> findSubjectBySemester(String subjectSemester) 
 			throws RecordNotFoundException{ 
 		  List<SubjectEntity>se=subjectService.findSubjectBySemester(subjectSemester); 
-		  ResponseEntity re=new ResponseEntity<List<SubjectEntity>>(se,HttpStatus.FOUND); 
-		  return re; 
+		  return new ResponseEntity<List<SubjectEntity>>(se,HttpStatus.FOUND); 
 	   }
 }

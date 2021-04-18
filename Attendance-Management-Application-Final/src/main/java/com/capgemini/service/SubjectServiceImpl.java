@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import com.capgemini.entity.CourseEntity;
 import com.capgemini.entity.FacultyEntity;
-import com.capgemini.entity.StudentEntity;
 import com.capgemini.entity.SubjectEntity;
 import com.capgemini.exception.CourseIdNotFoundException;
 import com.capgemini.exception.DuplicateRecordException;

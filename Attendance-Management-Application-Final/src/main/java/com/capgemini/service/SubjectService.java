@@ -1,8 +1,6 @@
 package com.capgemini.service;
 
 import java.util.List;
-import java.util.function.BooleanSupplier;
-
 import com.capgemini.entity.SubjectEntity;
 import com.capgemini.exception.CourseIdNotFoundException;
 import com.capgemini.exception.DuplicateRecordException;

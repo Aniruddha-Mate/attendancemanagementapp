@@ -10,7 +10,6 @@ import com.capgemini.entity.AttendanceEntity;
 import com.capgemini.entity.StudentEntity;
 import com.capgemini.entity.SubjectEntity;
 import com.capgemini.exception.AttendanceIdNotFoundException;
-import com.capgemini.exception.DuplicateRecordException;
 import com.capgemini.exception.RecordNotFoundException;
 import com.capgemini.exception.StudentNotFoundException;
 import com.capgemini.exception.SubjectNotFoundException;
